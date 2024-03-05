@@ -1,0 +1,114 @@
+body{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+.calculator{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dbc2b5;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.display{
+    height: 69px;
+    width: 100%;
+    padding: 20px;
+    font-size: 50px;
+    text-align: left;
+    border: none;
+    background-color: #eddcd2;
+    color: black;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+.history{
+    margin-left: 20px;
+    margin-top: -10px;
+    margin-bottom: -35px;
+    width: 60px;
+    height: 50px;
+}
+
+.divhist {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    max-height: 200px; 
+}
+
+.divhist.show {
+    display: block;
+    background-color: #eddcd2;
+    font-weight: bold;
+}
+
+.divhist p {
+    margin-left: 30px;
+    padding: 3px;
+    border-bottom: 1px solid #ddd;
+}
+
+.divhist p:last-child {
+    border-bottom: none;
+}
+
+
+.svg{
+    padding: 8px;
+}
+.back{
+    width: 60px;
+    margin-left: -13px;
+    margin-top: 5px;
+    height: 40px;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    background-color: #eddcd2;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:  hsl(0, 0%, 95%);;
+}
+
+button:active{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.opr{
+    background-color: #ffe4d8;
+    color: black;
+}
+
+.opr:hover{
+    background-color: #fbe8e0;
+    color: black;
+}
+
+.opr:active{
+    background-color: #f9f0ec;
+    color: black;
+}
