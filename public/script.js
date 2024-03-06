@@ -92,7 +92,7 @@ async function updateHistory() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(history[history.length - 1]) // Send the latest calculation
+            body: JSON.stringify(history[history.length - 1]) 
         });
         if (!response.ok) {
             throw new Error('Failed to update history');
