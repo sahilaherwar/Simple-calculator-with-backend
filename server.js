@@ -5,7 +5,7 @@ const port = 3000;
 let history = [];
 
 app.use(express.static('public'));
-app.use(express.json()); // Parse JSON bodies
+app.use(express.json());
 
 app.get('/history', (req, res) => {
     res.json(history);
@@ -13,16 +13,16 @@ app.get('/history', (req, res) => {
 
 app.post('/history', (req, res) => {
     const entry = req.body;
-    console.log('Received history entry:', entry); // Log the received history entry
+    console.log('Received history entry:', entry); 
     history.push(entry);
-    console.log('Updated history:', history); // Log the updated history array
+    console.log('Updated history:', history);
     res.sendStatus(201);
 });
 app.get('/history.csv', (req, res) => {
     let csv = '';
-    csv += 'operation,solution\n'; // Add column headers
+    csv += 'operation,solution\n'; 
     history.forEach(entry => {
-        csv += `${entry.operation},${entry.solution}\n`; // Add each entry to the CSV
+        csv += `${entry.operation},${entry.solution}\n`; 
     });
     res.set('Content-Type', 'text/csv');
     res.set('Content-Disposition', 'attachment; filename="history.csv"');
